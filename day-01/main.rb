@@ -2,7 +2,7 @@
 totalDistance = 0
 leftList, rightList = [], []
 
-File.foreach("day-01/day1-input.txt") do |line| 
+File.foreach("day-01/input.txt") do |line| 
   numbers = line.split.map(&:to_i)
   leftList << numbers[0]
   rightList << numbers[1]
