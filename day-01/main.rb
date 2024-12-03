@@ -1,8 +1,9 @@
 # Part 1: calculate total distance between location ids lists
 totalDistance = 0
-leftList, rightList = [], []
+leftList = []
+rightList = []
 
-File.foreach("day-01/input.txt") do |line| 
+File.foreach('day-01/input.txt') do |line|
   numbers = line.split.map(&:to_i)
   leftList << numbers[0]
   rightList << numbers[1]
@@ -11,7 +12,7 @@ end
 leftList.sort!
 rightList.sort!
 
-for i in 0..leftList.length-1 do 
+for i in 0..leftList.length - 1 do
   totalDistance += (leftList[i] - rightList[i]).abs
 end
 
